@@ -1,0 +1,71 @@
+@use '../../styles/mixin.scss' as mixin;
+
+.calculator-form {
+  margin: 0;
+  max-width: 720px;
+  border: mixin.$border-size solid mixin.$border-color;
+  background-color: mixin.$bg-color;
+
+  &-wrapper {
+    padding-inline: 20px;
+
+    @include mixin.on-tablet {
+      padding-inline: 68px;
+    }
+  }
+
+  &__title {
+    @include mixin.on-tablet {
+      font-size: 32px;
+    }
+  }
+
+  &__header {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-bottom: mixin.$border-size solid mixin.$border-color;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: mixin.$border-size solid mixin.$border-color;
+  }
+
+  &__footer {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom: mixin.$border-size solid mixin.$border-color;
+  }
+
+  &__footer-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include mixin.on-tablet {
+      flex-direction: row;
+    }
+  }
+
+  &__footer-result {
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: mixin.$color-lignt;
+  }
+
+  &__footer-result--right {
+    background-color: mixin.$color-darck;
+  }
+}

@@ -1,0 +1,32 @@
+@use '../styles/mixin.scss' as mixin;
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  font-family: Trueno;
+  font-size: 22px;
+  line-height: 42px;
+  font-weight: 600;
+  color: mixin.$color-text-darck;
+}
+
+h2 {
+  margin: 0;
+  font-family: Trueno;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 600;
+  color: mixin.$color-text-darck;
+}
+
+p {
+  margin: 0;
+  font-family: Trueno;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: mixin.$color-text-darck;
+}
