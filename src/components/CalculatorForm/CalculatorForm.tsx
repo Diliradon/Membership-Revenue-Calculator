@@ -5,7 +5,7 @@ import './CalculatorForm.scss';
 import { getTotalSales, getTotalTaxSales } from '../../helpers/functions';
 
 const percentLearnersHQ = 0.89;
-const percentUdemy = 0.63;
+const percentUdemy = 0.37;
 
 const initialValues = {
   monthlySales: {
