@@ -2,7 +2,7 @@
 
 .calculator-form {
   margin: 0;
-  max-width: 720px;
+  width: max(15vw, 720px);
   border: mixin.$border-size solid mixin.$border-color;
   background-color: mixin.$bg-color;
 

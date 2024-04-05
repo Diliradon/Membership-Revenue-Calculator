@@ -5,13 +5,6 @@ export interface InitialData {
   symbolNumber: string | null
   symbolModal: string | null
   maxLength: number
+  maxValue: number
   value: number
-}
-
-export interface InitialValues {
-  MonthlyMembers: number
-  CostPerMonth: number
-  AnnualMembers: number
-  CostPerYear: number
-  MonthlyRetentionRate: number
 }

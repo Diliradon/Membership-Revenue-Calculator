@@ -1,0 +1,16 @@
+@use '../../styles/mixin.scss' as mixin;
+
+.form-result {
+  display: flex;
+  gap: mixin.$gap-space;
+
+  &__calculation {
+    display: flex;
+    gap: mixin.$gap-space;
+    color: mixin.$bg-color;
+  }
+
+  &__calculation-symbol {
+    color: mixin.$bg-color;
+  }
+}

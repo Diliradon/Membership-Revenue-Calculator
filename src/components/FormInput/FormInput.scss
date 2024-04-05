@@ -8,10 +8,6 @@
   gap: 10px;
   border-bottom: mixin.$border-size solid mixin.$border-color;
 
-  &:last-child > * > .form-input__header-right {
-    flex-direction: row-reverse;
-  }
-
   &__header {
     display: flex;
     justify-content: space-between;
@@ -21,7 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: mixin.$gap-space;
   }
 
   &__header-modal {
@@ -64,6 +60,9 @@
 
   &__header-right {
     display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: mixin.$gap-space;
     cursor: pointer;
     color: mixin.$color-lignt;
   }
