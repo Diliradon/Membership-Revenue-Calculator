@@ -51,9 +51,11 @@ export const FormInput: React.FC<Props> = ({
         </div>
 
         <label className="form-input__header-right">
-          <p className="form-input__header-symbol">
-            {symbolNumber}
-          </p>
+          {symbolNumber && (
+            <p className="form-input__header-symbol">
+              {symbolNumber}
+            </p>
+          )}
 
           <span
             id="hide"

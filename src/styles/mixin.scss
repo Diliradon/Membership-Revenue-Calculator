@@ -1,13 +1,16 @@
-$color-text-darck: #1F2628;
+$color-text-darck: #ffffff;
 $color-text-light: #1F2628;
-$color-lignt: #23A79C;
-$color-darck: #1B8078;
+$color-lignt: #de3122;
 $border-color: #E0E7EB;
 $symbol-modal-color: #c4c4c4;
 $input-bg-color: #e4e4ec;
-$bg-color: #fff;
+$bg-color: #000;
+$bg-color-result: #ffffff;
+$color-text-result: #000;
+$color-number-result: #00ab3d;
+$color-number-result-red: #de3122;
 $border-size: 2px;
-$gap-space: 5px;
+$gap-space: 10px;
 $tablet-min-width: 1024px;
 
 @mixin on-tablet {

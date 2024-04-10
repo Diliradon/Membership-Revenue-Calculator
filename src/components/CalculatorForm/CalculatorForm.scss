@@ -3,11 +3,12 @@
 .calculator-form {
   margin: 0;
   width: max(15vw, 720px);
+  border-radius: 5px;
   border: mixin.$border-size solid mixin.$border-color;
   background-color: mixin.$bg-color;
 
   &-wrapper {
-    padding-inline: 20px;
+    padding: 20px;
 
     @include mixin.on-tablet {
       padding-inline: 68px;
@@ -15,9 +16,11 @@
   }
 
   &__title {
-    @include mixin.on-tablet {
-      font-size: 32px;
-    }
+    font-size: 32px;
+  }
+
+  &__description {
+    text-align: center;
   }
 
   &__header {
@@ -34,7 +37,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-bottom: mixin.$border-size solid mixin.$border-color;
   }
 
   &__footer {
@@ -44,7 +46,10 @@
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
-    border-bottom: mixin.$border-size solid mixin.$border-color;
+  }
+
+  &__footer-title {
+    margin-top: 20px;
   }
 
   &__footer-block {
@@ -62,10 +67,7 @@
     width: 100%;
     padding: 20px;
     border-radius: 5px;
-    background-color: mixin.$color-lignt;
-  }
-
-  &__footer-result--right {
-    background-color: mixin.$color-darck;
+    flex-direction: column;
+    background-color: mixin.$bg-color-result;
   }
 }

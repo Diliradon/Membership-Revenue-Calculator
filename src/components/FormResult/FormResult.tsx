@@ -1,9 +1,10 @@
+import classNames from 'classnames';
 import './FormResult.scss';
 
 interface Props {
   className?: string
   title: string
-  calculation: number
+  calculation: string
 };
 
 export const FormResult: React.FC<Props> = ({
@@ -14,11 +15,15 @@ export const FormResult: React.FC<Props> = ({
   return (
     <div className={`form-result ${className}`}>
       <p className="form-result__title">{title}</p>
-     
-      <p className="form-result__calculation">
+
+      <p className={classNames('form-result__calculation', {
+        'form-result__calculation--red': title === 'Udemy:',
+      })}>
+        <span className={classNames('form-result__calculation-symbol', {
+          'form-result__calculation--red': title === 'Udemy:',
+        })}>$</span>
         {calculation}
-        <span className="form-result__calculation-symbol">$</span>
       </p>
-    </div>
+    </div >
   );
 };

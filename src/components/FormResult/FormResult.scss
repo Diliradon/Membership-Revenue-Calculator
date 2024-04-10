@@ -2,15 +2,28 @@
 
 .form-result {
   display: flex;
+  justify-content: space-between;
   gap: mixin.$gap-space;
 
+  &__title {
+    font-size: 26px;
+    color: mixin.$color-text-result;
+    font-weight: bold;
+  }
+
   &__calculation {
+    font-size: 32px;
+    font-weight: bold;
     display: flex;
     gap: mixin.$gap-space;
-    color: mixin.$bg-color;
+    color: mixin.$color-number-result;
   }
 
   &__calculation-symbol {
-    color: mixin.$bg-color;
+    color: mixin.$color-number-result;
+  }
+
+  &__calculation--red {
+    color: mixin.$color-number-result-red;
   }
 }

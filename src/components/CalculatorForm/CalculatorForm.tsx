@@ -11,22 +11,22 @@ const initialValues = {
   monthlySales: {
     id: 1,
     title: 'Monthly Sales',
-    modalText: 'This is how many sales you are looking to do per month. Try realistic, then dare to dream.',
-    symbolNumber: 'q',
+    modalText: 'This is how many sales you are looking to do per month. Try realistic first, then dare to dream.',
+    symbolNumber: '',
     symbolModal: '!',
     maxLength: 5,
-    maxValue: 10000,
-    value: 0,
+    maxValue: 5000,
+    value: 500,
   },
   averageCost: {
     id: 2,
     title: 'Average Cost',
-    modalText: 'You may only have 1 course so put this in, but if you have more just put a rough figure in.',
+    modalText: 'Enter the price of your course. If you sell additional courses, simply enter an estimate.',
     symbolNumber: '$',
     symbolModal: '$',
     maxLength: 4,
-    maxValue: 1000,
-    value: 0,
+    maxValue: 2000,
+    value: 99,
   },
 }
 
@@ -55,12 +55,12 @@ export const CalculatorForm = () => {
     }))
   };
 
-  const totalSales = getTotalSales(monthlySales.value, averageCost.value);
-
-  const totalSalesLearnersHQ 
-    = getTotalTaxSales(monthlySales.value, averageCost.value, percentLearnersHQ);
-  const totalSalesUdemy 
-    = getTotalTaxSales(monthlySales.value, averageCost.value, percentUdemy);
+  const totalSales 
+    = getTotalSales(monthlySales.value, averageCost.value).toLocaleString('en-US');
+  const totalSalesLearnersHQ
+    = getTotalTaxSales(monthlySales.value, averageCost.value, percentLearnersHQ).toLocaleString('en-US');
+  const totalSalesUdemy
+    = getTotalTaxSales(monthlySales.value, averageCost.value, percentUdemy).toLocaleString('en-US');
 
   return (
     <form className="calculator-form">
@@ -70,7 +70,8 @@ export const CalculatorForm = () => {
             Earnings Calculator
           </h1>
           <p className="calculator-form__description">
-            Use the sliders to see how much money you&#x27;ll make.
+            Use the sliders to see how much money you&#x27;ll make,
+            <br /> or input the figure directly.
           </p>
         </div>
 
@@ -86,10 +87,6 @@ export const CalculatorForm = () => {
             filedValue={averageCost}
             onChangeValues={handleChangeValues}
           />
-
-          <p className="calculator-form__description">
-            This is what you could be selling per month.
-          </p>
 
           <FormResult
             className="calculator-form__footer-result"
@@ -111,10 +108,7 @@ export const CalculatorForm = () => {
 
             <FormResult
               calculation={totalSalesUdemy}
-              className="
-                calculator-form__footer-result
-                calculator-form__footer-result--right
-              "
+              className="calculator-form__footer-result"
               title="Udemy:"
             />
           </div>

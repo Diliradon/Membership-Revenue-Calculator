@@ -6,7 +6,6 @@
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  border-bottom: mixin.$border-size solid mixin.$border-color;
 
   &__header {
     display: flex;
@@ -60,25 +59,24 @@
 
   &__header-right {
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
-    gap: mixin.$gap-space;
     cursor: pointer;
-    color: mixin.$color-lignt;
+    color: mixin.$color-number-result;
   }
 
   &__header-symbol {
     font-size: 18px;
     font-weight: 700;
     line-height: 30px;
-    color: mixin.$color-lignt;
+    color: mixin.$color-number-result;
   }
 
   &__header-input {
     padding: 0;
-    color: mixin.$color-lignt;
+    color: mixin.$color-number-result;
+    background-color: mixin.$bg-color;
     text-align: end;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
     line-height: 30px;
     position: relative;
