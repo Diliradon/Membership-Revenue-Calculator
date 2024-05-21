@@ -17,7 +17,7 @@ You can view a live preview of the Membership-Revenue-Calculator page [here](htt
 
 ## Mockup
 
-A landing page design mockup can be found. At the request of the customer it was changed. [Here] (https://membershipworkshop.com/calculator-thanks)
+A landing page design mockup can be found. At the request of the customer it was changed. [Here](https://membershipworkshop.com/calculator-thanks)
 
 ## Features
 
